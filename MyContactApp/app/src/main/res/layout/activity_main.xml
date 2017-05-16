@@ -58,9 +58,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Age:"
         android:id="@+id/textView3"
-        android:layout_alignBottom="@+id/editText_age"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -68,7 +68,8 @@
         android:text="Get Contacts"
         android:id="@+id/button_GetContacts"
         android:layout_alignTop="@+id/button_add"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="viewData" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -85,9 +86,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/editText_age"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/button_add"
-        android:layout_alignRight="@+id/editText_name"
-        android:layout_alignEnd="@+id/editText_name" />
+        android:layout_alignLeft="@+id/editText_address"
+        android:layout_alignStart="@+id/editText_address"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
