@@ -67,9 +67,12 @@
         android:layout_height="wrap_content"
         android:text="Get Contacts"
         android:id="@+id/button_GetContacts"
+        android:onClick="viewData"
         android:layout_alignTop="@+id/button_add"
-        android:layout_centerHorizontal="true"
-        android:onClick="viewData" />
+        android:layout_alignRight="@+id/editText_age"
+        android:layout_alignEnd="@+id/editText_age"
+        android:layout_marginRight="55dp"
+        android:layout_marginEnd="55dp" />
 
     <EditText
         android:layout_width="wrap_content"

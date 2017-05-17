@@ -1,6 +1,7 @@
 package com.example.wangm9557.mycontactapp;
 
 import android.database.Cursor;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -68,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
         //  use getStringMethod
 
         while(res.moveToNext()){
-            buffer.append("Name: " + res.getString(1));
+            buffer.append("ID: " + res.getString(0));
+            buffer.append(" /// Name: " + res.getString(1));
             buffer.append(" /// Address: " + res.getString(2));
             buffer.append(" /// Age: " + res.getString(3));
             buffer.append("\n\n");
@@ -81,7 +83,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showMessage(String title, String message) {
-
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
     }
 
 }
